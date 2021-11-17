@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme)=>({
   }
 }));
 
-function Post() {
+function Post({title,description,image}) {
 
   const classes = useStyles();
 
@@ -21,15 +21,12 @@ function Post() {
         <CardActionArea>
             <CardMedia 
                 className={classes.media} 
-                image="https://blog.hubspot.com/hubfs/how-long-blog-posts.jpg"
-                title="My Post"
+                image={image}
+                title={title}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5">My first post</Typography>
-                <Typography variant="body2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reiciendis earum natus id veniam itaque laudantium dolore officia atque ducimus ipsam alias optio ab laboriosam perferendis debitis, temporibus accusantium exercitationem?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reiciendis earum natus id veniam itaque laudantium dolore officia atque ducimus ipsam alias optio ab laboriosam perferendis debitis, temporibus accusantium exercitationem?
-                </Typography>
+                <Typography variant="body2"> {description} </Typography>
             </CardContent>
         </CardActionArea>
         <CardActions>
