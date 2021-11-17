@@ -76,7 +76,7 @@ function NavBar() {
 
     return (
         <div>
-            <AppBar>
+            <AppBar position="fixed">
                 <Toolbar className={classes.toolbar}>
                     {/* Titles. One for large screens and one for smaller ones  */}
                     <Typography variant="h6" className={classes.logoLG}>
